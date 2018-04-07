@@ -33,7 +33,8 @@
             	<task
             		:todo='todo'
             		v-if="!todo.complete" 
-            		v-for="(todo,index) in toList" 
+					v-for="(todo,index) in toList"
+                    :key="todo.id"
             		></task>
             	</div>          	      	
             </div>
@@ -43,7 +44,8 @@
             	<task class='comed-list'
             		:todo='todo'
             		v-if="todo.complete" 
-            		v-for="(todo,index) in toList" 
+					v-for="(todo,index) in toList"
+					:key="todo.id" 
             		>
             		</task>
             	</div>              	
